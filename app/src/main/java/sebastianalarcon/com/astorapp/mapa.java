@@ -109,12 +109,12 @@ public class mapa extends ActionBarActivity implements
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.actform) {
+        if (id == R.id.formulario) {
             Intent f = new Intent(this,formulario.class);
             startActivity(f);
             return true;
         }
-        if (id == R.id.actmain) {
+        if (id == R.id.main) {
             Intent m = new Intent(this,MainActivity.class);
             startActivity(m);
             return true;

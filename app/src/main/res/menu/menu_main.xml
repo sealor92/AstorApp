@@ -1,8 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/actmapa"
+    <item android:id="@+id/mapa"
         android:title="@string/title_activity_mapa"/>
-    <item android:id="@+id/actform"
+
+    <item android:id="@+id/formulario"
         android:title="@string/title_activity_formulario"/>
 </menu>

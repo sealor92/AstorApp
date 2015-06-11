@@ -41,12 +41,12 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.actmapa) {
+        if (id == R.id.mapa) {
             Intent m = new Intent(this,mapa.class);
             startActivity(m);
             return true;
         }
-        if (id == R.id.actform) {
+        if (id == R.id.formulario) {
             Intent f = new Intent(this,formulario.class);
             startActivity(f);
             return true;

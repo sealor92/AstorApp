@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="sebastianalarcon.com.astorapp.formulario">
     <item
-        android:id="@+id/actmapa"
+        android:id="@+id/mapa"
         android:title="@string/title_activity_mapa"/>
     <item
-        android:id="@+id/actmain"
+        android:id="@+id/main"
         android:title="Inicio"/>
 </menu>

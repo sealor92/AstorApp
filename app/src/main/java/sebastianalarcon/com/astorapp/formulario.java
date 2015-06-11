@@ -31,13 +31,13 @@ public class formulario extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.actmain) {
+        if (id == R.id.main) {
             Intent m = new Intent(this,MainActivity.class);
             startActivity(m);
             return true;
         }
 
-        if (id == R.id.actmapa) {
+        if (id == R.id.mapa) {
             Intent m = new Intent(this,mapa.class);
             startActivity(m);
             return true;
