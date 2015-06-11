@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="sebastianalarcon.com.astorapp.formulario">
+    <item
+        android:id="@+id/actmapa"
+        android:title="@string/title_activity_mapa"/>
+    <item
+        android:id="@+id/actmain"
+        android:title="Inicio"/>
+</menu>
