@@ -1,24 +1,23 @@
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-
-    >
-
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
+        android:layout_gravity="center"
         android:background="@drawable/fondo_astor">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.1"
-            android:text="Astor"
+            android:text="BD Astor"
             android:gravity="center"
-            android:textSize="40dp"/>
+            android:textSize="40dp"
+            android:textColor="@color/red"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,34 +34,38 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_weight="1"
+                    android:layout_weight="0.95"
                     >
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/EdText1"
-                        android:textSize="20dp"
-                        android:layout_weight="1"/>
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2.2"
-                        android:text="buscar"
+                        android:layout_weight="2"
+                        android:text="Buscar"
                         android:id="@+id/btn1"
+                        android:background="@color/goldenrod"
+                        android:textColor="@color/white"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/EdText1"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
                         />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_weight="1"
+                    android:layout_weight="0.95"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
                         android:layout_weight="2"
-                        android:text="Nombre"/>
+                        android:text="Nombre"
+                        android:textColor="@color/red"/>
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -74,14 +77,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_weight="1"
+                    android:layout_weight="0.95"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
                         android:layout_weight="1.8"
-                        android:text="Latitud"/>
+                        android:text="Latitud"
+                        android:textColor="@color/red"
+                        />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -93,14 +98,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_weight="1"
+                    android:layout_weight="0.95"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
                         android:layout_weight="1.8"
-                        android:text="Longitud"/>
+                        android:text="Longitud"
+                        android:textColor="@color/red"/>
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -118,14 +124,18 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Insertar"
-                        android:id="@+id/btninsertar"
+                        android:id="@+id/botonInsertar"
+                        android:background="@color/goldenrod"
+                        android:textColor="@color/white"
                         />
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Cargar"
-                        android:id="@+id/btndb"
+                        android:id="@+id/botondb"
+                        android:background="@color/goldenrod"
+                        android:textColor="@color/white"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -138,17 +148,29 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Eliminar"
-                        android:id="@+id/btneliminar"
+                        android:id="@+id/botonEliminar"
+                        android:background="@color/goldenrod"
+                        android:textColor="@color/white"
                         />
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Actualizar"
-                        android:id="@+id/btnactualizar"
+                        android:id="@+id/botonActualizar"
+                        android:background="@color/goldenrod"
+                        android:textColor="@color/white"
                         />
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Resultado de la Busqueda:"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/red"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -156,7 +178,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
+                        android:textSize="10dp"
                         android:text="Nombre"
                         android:layout_weight="1"
                         />
@@ -164,8 +186,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textSize="20dp"
-                        android:id="@+id/Txnombre"
+                        android:textSize="10dp"
+                        android:id="@+id/bNombre"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -175,7 +197,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
+                        android:textSize="10dp"
                         android:layout_weight="1"
                         android:text="Latitud"
                         />
@@ -183,8 +205,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textSize="20dp"
-                        android:id="@+id/TxLatitud"
+                        android:textSize="10dp"
+                        android:id="@+id/bLatitud"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -194,7 +216,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
+                        android:textSize="10dp"
                         android:layout_weight="1"
                         android:text="Longitud"
                         />
@@ -202,8 +224,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textSize="20dp"
-                        android:id="@+id/TxLongitud"
+                        android:textSize="10dp"
+                        android:id="@+id/bLongitud"
                         />
                 </LinearLayout>
 

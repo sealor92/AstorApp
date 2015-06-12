@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">AstorApp</string>
-    <string name="title_activity_formulario">Formulario</string>
+    <string name="title_activity_formulario">Base de datos</string>
     <string name="title_activity_mapa">Mapa</string>
 </resources>

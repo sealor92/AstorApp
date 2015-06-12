@@ -42,16 +42,16 @@ public class formulario extends ActionBarActivity implements View.OnClickListene
         //Manager.insertar("Alejo","5822128");
         //Manager.insertar("Pablo","2651752");
         //Manager.insertar("Paula","4910413");
-        Button btnbuscar = (Button) findViewById(R.id.btn1);
-        btnbuscar.setOnClickListener(this);
-        Button btncargar = (Button) findViewById(R.id.btndb);
-        btncargar.setOnClickListener(this);
-        Button btninsertar = (Button) findViewById(R.id.btninsertar);
-        btninsertar.setOnClickListener(this);
-        Button btneliminar = (Button) findViewById(R.id.btneliminar);
-        btneliminar.setOnClickListener(this);
-        Button btnactualizar = (Button) findViewById(R.id.btnactualizar);
-        btnactualizar.setOnClickListener(this);
+        Button botonBuscar = (Button) findViewById(R.id.btn1);
+        botonBuscar.setOnClickListener(this);
+        Button botondb = (Button) findViewById(R.id.botondb);
+        botondb.setOnClickListener(this);
+        Button botonInsertar = (Button) findViewById(R.id.botonInsertar);
+        botonInsertar.setOnClickListener(this);
+        Button botonEliminar = (Button) findViewById(R.id.botonEliminar);
+        botonEliminar.setOnClickListener(this);
+        Button botonActualizar = (Button) findViewById(R.id.botonActualizar);
+        botonActualizar.setOnClickListener(this);
     }
 
 
@@ -90,7 +90,7 @@ public class formulario extends ActionBarActivity implements View.OnClickListene
         if (v.getId()==R.id.btn1){
             new BuscarTask().execute();
         }
-        if(v.getId()==R.id.btndb){
+        if(v.getId()==R.id.botondb){
             lista = (ListView) findViewById(android.R.id.list);
             Ednombre = (EditText) findViewById(R.id.EdText1);
 
@@ -101,7 +101,7 @@ public class formulario extends ActionBarActivity implements View.OnClickListene
             lista.setAdapter(adapter);
 
         }
-        if (v.getId()==R.id.btninsertar){
+        if (v.getId()==R.id.botonInsertar){
             EditText nombre = (EditText) findViewById(R.id.EdNombre);
             EditText latitud = (EditText) findViewById(R.id.EdLatitud);
             EditText longitud = (EditText) findViewById(R.id.EdLong);
@@ -111,13 +111,13 @@ public class formulario extends ActionBarActivity implements View.OnClickListene
             longitud.setText("");
             Toast.makeText(getApplicationContext(), "Insertado", Toast.LENGTH_SHORT).show();
         }
-        if(v.getId()==R.id.btneliminar){
+        if(v.getId()==R.id.botonEliminar){
             EditText nombre = (EditText) findViewById(R.id.EdNombre);
             Manager.eliminar(nombre.getText().toString());
             Toast.makeText(getApplicationContext(),"Eliminado", Toast.LENGTH_SHORT).show();
             nombre.setText("");
         }
-        if (v.getId()==R.id.btnactualizar){
+        if (v.getId()==R.id.botonActualizar){
             EditText nombre = (EditText) findViewById(R.id.EdNombre);
             EditText latitud = (EditText) findViewById(R.id.EdLatitud);
             EditText longitud = (EditText) findViewById(R.id.EdLong);
@@ -156,20 +156,20 @@ public class formulario extends ActionBarActivity implements View.OnClickListene
     }
 
     public void obtener () {
-        TextView Txnombre = (TextView) findViewById(R.id.Txnombre);
-        TextView Txlatitud = (TextView) findViewById(R.id.TxLatitud);
-        TextView Txlongitud = (TextView) findViewById(R.id.TxLongitud);
+        TextView bnombre = (TextView) findViewById(R.id.bNombre);
+        TextView blatitud = (TextView) findViewById(R.id.bLatitud);
+        TextView blongitud = (TextView) findViewById(R.id.bLongitud);
         if (cursor.moveToFirst()){
             String dbnombre = cursor.getString(cursor.getColumnIndex(Manager.CN_NAME));
-            Txnombre.setText(dbnombre);
+            bnombre.setText(dbnombre);
             String dblatitud = cursor.getString(cursor.getColumnIndex(Manager.CN_LAT));
-            Txlatitud.setText(dblatitud);
+            blatitud.setText(dblatitud);
             String dblongitud = cursor.getString(cursor.getColumnIndex(Manager.CN_LONG));
-            Txlongitud.setText(dblongitud);}
+            blongitud.setText(dblongitud);}
         else{
-            Txnombre.setText("No Found");
-            Txlatitud.setText("No Found");
-            Txlongitud.setText("No Found");
+            bnombre.setText("No Encontrado");
+            blatitud.setText("No Encontrado");
+            blongitud.setText("No Encontrado");
         }
 
     }

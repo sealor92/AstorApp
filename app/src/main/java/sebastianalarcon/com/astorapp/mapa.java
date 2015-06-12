@@ -80,7 +80,6 @@ public class mapa extends ActionBarActivity implements
                 float lat = Float.parseFloat(dblatitud);
                 float longitud = Float.parseFloat(dblongitud);
                 final LatLng LOCATION_VAR = new LatLng(lat,longitud);
-                Toast.makeText(getApplicationContext(), dbnombre, Toast.LENGTH_SHORT).show();
                 map.addMarker(new MarkerOptions()
                         .position(LOCATION_VAR)
                         .title(dbnombre)
@@ -90,7 +89,7 @@ public class mapa extends ActionBarActivity implements
 
         }
         else{
-            Toast.makeText(getApplicationContext(), "no hay Restaurantes ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "No se han ingresado restaurantes", Toast.LENGTH_SHORT).show();
         }
     }
 
