@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="12"
-            android:text="Buscar Medellín"
+            android:text="Buscar a Medellín"
             android:onClick="onClick"
             android:id="@+id/button1"
             android:background="@color/red"

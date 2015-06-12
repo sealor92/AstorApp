@@ -131,7 +131,8 @@ public class mapa extends ActionBarActivity implements
             newLocationReady=true;
         }
         else{
-            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, (com.google.android.gms.location.LocationListener) this);
+            //LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, (com.google.android.gms.location.LocationListener) this);
+
         }
     }
 
@@ -188,8 +189,8 @@ public class mapa extends ActionBarActivity implements
         currentLocation = new LatLng(latitude,longitude);
         map.addMarker(new MarkerOptions()
                 .position(currentLocation)
-                .title("Im here")
-                .snippet("This is your current location")
+                .title("Yo estoy aquí")
+                .snippet("Esta es tu posición actual")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
     }
 
